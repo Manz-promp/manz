@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #001f3f; /* Latar belakang malam */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Menghindari scrollbar */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Agar teks di atas bintang */
+    text-align: center;
+    margin-top: 20vh; /* Posisikan teks di tengah layar */
+}
+
+.greeting {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+.sweet {
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 1s;
+}
+.message {
+    font-size: 1.5em;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    opacity: 0.8;
+    animation: moveStar linear infinite;
+}
+
+@keyframes moveStar {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
