@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Good Night</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="greeting">Good Night!</h1>
+        <h1 class="sweet">Sweet dreams! Can’t wait to hear about your adventures tomorrow</h1>
+        <p class="message">May your dreams be sweet and peaceful.</p>
+    </div>
+    <script>
+        const starsCount = 100;
+        const container = document.body;
+
+        for (let i = 0; i < starsCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.animationDuration = Math.random() * 2 + 1 + 's';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            container.appendChild(star);
+        }
+    </script>
+</body>
+</html>
